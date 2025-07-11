@@ -1,0 +1,16 @@
+[debugproc,trawler_loot](int $rolls)
+if (p_finduid(uid) = true) {
+    %trawler = 3;
+    %trawler_catch = $rolls;
+}
+
+[debugproc,trawler]
+if (p_finduid(uid) = true) {
+    p_telejump(0_41_49_52_34);
+}
+
+[debugproc,givetrawler]
+inv_clear(inv);
+inv_add(inv, swamppaste, 1000000);
+inv_add(inv, bucket_bailing, 10);
+inv_add(inv, rope, 5);
