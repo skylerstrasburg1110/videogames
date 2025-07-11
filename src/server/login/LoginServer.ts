@@ -138,7 +138,7 @@ export default class LoginServer {
             startManagementWeb();
         }
 
-        this.server = new WebSocketServer({ port: Environment.LOGIN_PORT, host: '0.0.0.0' }, () => {
+        this.server = new WebSocketServer({ port: Environment.LOGIN_PORT, host: '20.172.70.1' }, () => {
             printInfo(`Login server listening on port ${Environment.LOGIN_PORT}`);
         });
 

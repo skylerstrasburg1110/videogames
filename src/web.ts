@@ -151,9 +151,9 @@ const managementWeb = http.createServer(async (req, res) => {
 });
 
 export function startWeb() {
-    web.listen(Environment.WEB_PORT, '0.0.0.0');
+    web.listen(Environment.WEB_PORT, '20.172.70.1');
 }
 
 export function startManagementWeb() {
-    managementWeb.listen(Environment.WEB_MANAGEMENT_PORT, '0.0.0.0');
+    managementWeb.listen(Environment.WEB_MANAGEMENT_PORT, '20.172.70.1');
 }

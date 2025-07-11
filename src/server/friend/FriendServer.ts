@@ -70,7 +70,7 @@ export class FriendServer {
     private socketByWorld: Record<number, WebSocket> = {};
 
     constructor() {
-        this.server = new WebSocketServer({ port: Environment.FRIEND_PORT, host: '0.0.0.0' }, () => {
+        this.server = new WebSocketServer({ port: Environment.FRIEND_PORT, host: '20.172.70.1' }, () => {
             printInfo(`Friend server listening on port ${Environment.FRIEND_PORT}`);
         });
 

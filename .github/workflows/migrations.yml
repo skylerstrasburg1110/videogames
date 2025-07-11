@@ -18,7 +18,7 @@ jobs:
           MYSQL_DATABASE: lostcity
         ports:
           - 3306:3306
-        options: --health-cmd="mysqladmin ping -h 0.0.0.0 -uroot -ppassword" --health-interval=10s --health-timeout=5s --health-retries=3
+        options: --health-cmd="mysqladmin ping -h 20.172.70.1 -uroot -ppassword" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
       - name: Checkout repository
@@ -39,7 +39,7 @@ jobs:
 
       - name: Run Multiworld Migrations
         env:
-          DATABASE_URL: "mysql://root:password@0.0.0.0:3306/lostcity"
+          DATABASE_URL: "mysql://root:password@20.172.70.1:3306/lostcity"
         run: |
           set -e
           npx prisma migrate reset --schema prisma/multiworld/schema.prisma --force

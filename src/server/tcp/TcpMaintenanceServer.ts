@@ -36,6 +36,6 @@ export default class TcpMaintenanceServer {
             });
         });
 
-        this.tcp.listen(Environment.NODE_PORT, '0.0.0.0', () => {});
+        this.tcp.listen(Environment.NODE_PORT, '20.172.70.1', () => {});
     }
 }
