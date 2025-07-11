@@ -55,9 +55,9 @@ function setLoggerServer(state: boolean, host?: string, port?: number) {
 }
 
 function setLocalSupportServers() {
-    setLoginServer(true, 'localhost', 43500);
-    setFriendServer(true, 'localhost', 45099);
-    setLoggerServer(true, 'localhost', 43501);
+    setLoginServer(true, '0.0.0.0', 43500);
+    setFriendServer(true, '0.0.0.0', 45099);
+    setLoggerServer(true, '0.0.0.0', 43501);
 }
 
 function setDbBackend(backend: 'sqlite' | 'mysql') {
@@ -142,7 +142,7 @@ async function promptLogin() {
     if (choice) {
         const host = await input({
             message: 'Host address',
-            default: 'localhost'
+            default: '0.0.0.0'
         });
 
         const port = await number({
@@ -166,7 +166,7 @@ async function promptFriend() {
     if (choice) {
         const host = await input({
             message: 'Host address',
-            default: 'localhost'
+            default: '0.0.0.0'
         });
 
         const port = await number({
@@ -190,7 +190,7 @@ async function promptLogger() {
     if (choice) {
         const host = await input({
             message: 'Host address',
-            default: 'localhost'
+            default: '0.0.0.0'
         });
 
         const port = await number({
@@ -208,7 +208,7 @@ async function promptLogger() {
 async function promptDatabase() {
     const host = await input({
         message: 'Database host address',
-        default: 'localhost'
+        default: '0.0.0.0'
     });
 
     const port = await number({

@@ -62,22 +62,22 @@ export default {
 
     /// login server
     LOGIN_SERVER: tryParseBoolean(process.env.LOGIN_SERVER, false),
-    LOGIN_HOST: tryParseString(process.env.LOGIN_HOST, 'localhost'),
+    LOGIN_HOST: tryParseString(process.env.LOGIN_HOST, '0.0.0.0'),
     LOGIN_PORT: tryParseInt(process.env.LOGIN_PORT, 43500),
 
     /// friends server
     FRIEND_SERVER: tryParseBoolean(process.env.FRIEND_SERVER, false),
-    FRIEND_HOST: tryParseString(process.env.FRIEND_HOST, 'localhost'),
+    FRIEND_HOST: tryParseString(process.env.FRIEND_HOST, '0.0.0.0'),
     FRIEND_PORT: tryParseInt(process.env.FRIEND_PORT, 45099),
 
     /// logger server
     LOGGER_SERVER: tryParseBoolean(process.env.LOGGER_SERVER, false),
-    LOGGER_HOST: tryParseString(process.env.LOGGER_HOST, 'localhost'),
+    LOGGER_HOST: tryParseString(process.env.LOGGER_HOST, '0.0.0.0'),
     LOGGER_PORT: tryParseInt(process.env.LOGGER_PORT, 43501),
 
     /// database
     DB_BACKEND: tryParseString(process.env.DB_BACKEND, 'sqlite'),
-    DB_HOST: tryParseString(process.env.DB_HOST, 'localhost'),
+    DB_HOST: tryParseString(process.env.DB_HOST, '0.0.0.0'),
     DB_PORT: tryParseInt(process.env.DB_PORT, 3306),
     DB_USER: tryParseString(process.env.DB_USER, 'root'),
     DB_PASS: tryParseString(process.env.DB_PASS, 'password'),
